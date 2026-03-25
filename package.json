@@ -11,9 +11,33 @@
     "extensions": [
       "openclaw.plugin.json"
     ],
-    "capabilities": ["spatial", "heartbeat", "actuator"],
     "compat": {
       "pluginApi": ">=3.22.0"
+    },
+    "capabilities": ["spatial", "heartbeat", "actuator"],
+    "configSchema": {
+      "type": "object",
+      "required": ["S2_PRIVACY_CONSENT"],
+      "properties": {
+        "S2_PRIVACY_CONSENT": {
+          "type": "string",
+          "description": "Set to '1' to consent to spatial data processing.",
+          "default": "0"
+        },
+        "S2_ENABLE_REAL_ACTUATION": {
+          "type": "string",
+          "description": "Set to '1' to enable physical IoT device control.",
+          "default": "0"
+        },
+        "HA_URL": {
+          "type": "string",
+          "description": "Your Home Assistant Instance URL."
+        },
+        "HA_TOKEN": {
+          "type": "string",
+          "description": "Long-lived Access Token for Home Assistant."
+        }
+      }
     }
   },
   "keywords": [
