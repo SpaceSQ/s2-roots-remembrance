@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.2] - 2026-04-02
+## [1.0.3] - 2026-04-02
 ### 🛡️ The Cryptographic Truth Patch (真理与硬核补丁)
 - **Hard-Exit Enforcement**: 彻底移除了 `s2_zuji_mesh.py` 中的 `DEFAULT_SALT` 弱密钥派生后门。若环境未提供 `S2_FAMILY_MESH_KEY`，系统将直接触发 `sys.exit(1)` 硬熔断，拒绝不安全的降级运行。
 - **Cryptographic Honesty**: 修正了 `README.md` 与文档中的加密强度声明，将 "AES-256" 更正为实际底层的 "AES-128-CBC (Fernet)"，消除安全声明误导。
