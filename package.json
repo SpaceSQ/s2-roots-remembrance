@@ -1,6 +1,6 @@
 {
   "name": "s2-roots-remembrance",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Roots & Remembrance (思乡[祖籍]). A cyber-physical anchor for kinship and meaning, featuring LLM-driven family trees and zero-trust E2EE mesh synchronization.",
   "main": "s2_zuji_engine.py",
   "openclaw": {

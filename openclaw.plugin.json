@@ -1,36 +1,29 @@
 {
   "id": "s2-roots-remembrance",
   "pluginId": "s2-roots-remembrance",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "native-code",
   "entry": "s2_zuji_engine.py",
   "runtime": "python3",
   "configSchema": {
     "type": "object",
     "properties": {
-      "enforce_asset_filter_meltdown": {
-        "type": "boolean",
-        "default": true,
-        "description": "CRITICAL: Enforces asset filter. Blocks areas, valuations, and property rights."
+      "S2_FAMILY_MESH_KEY": {
+        "type": "string",
+        "description": "Required for true AES encryption of the family mesh blind relay."
       },
-      "enforce_pii_privacy_meltdown": {
-        "type": "boolean",
-        "default": true,
-        "description": "CRITICAL: Enforces PII filter. Blocks phones, IDs, exact addresses, and social accounts."
-      },
-      "enable_e2ee_blind_relay": {
-        "type": "boolean",
-        "default": true,
-        "description": "Enables End-to-End Encrypted (E2EE) blind relay for family mesh synchronization."
+      "S2_LLM_API_KEY": {
+        "type": "string",
+        "description": "API token for connecting to the S2-SWM LLM to process natural language (optional, falls back to local rules)."
       }
-    },
-    "required": [
-      "enforce_asset_filter_meltdown",
-      "enforce_pii_privacy_meltdown"
-    ]
+    }
   },
+  "secrets": [
+    "S2_FAMILY_MESH_KEY",
+    "S2_LLM_API_KEY"
+  ],
   "network": {
     "outbound": true,
-    "justification": "Required strictly for AES-256 E2EE Blind Relay. No plaintext data is ever transmitted or stored on cloud servers."
+    "justification": "Outbound access strictly limited to fetching LLM generations via S2_LLM_API_KEY and broadcasting AES-encrypted blobs to the blind relay server."
   }
 }

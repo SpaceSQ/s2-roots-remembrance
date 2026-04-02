@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.0] - 2026-04-02
+## [1.0.1] - 2026-04-02
 ### 🚀 Genesis Launch (创世发布)
 - **Triple Data Topology (三重数据拓扑)**: 
   - `Ancestral Nodes` (故土基石): 记录祖屋风貌、历史典故与岁月影像。
