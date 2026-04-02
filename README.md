@@ -1,41 +1,88 @@
-# 🧬 S2-TWL Core Console (桃花源世界实验室核心基座)
+🧬 S2-SWM: Roots & Remembrance (思乡 [祖籍])
 
-> *"We do not replace century-old scientific instruments; we equip them with causal engines to parallel universes."*
-> *"我们不推翻过去一个世纪的科学仪器，我们为它们装上通往平行宇宙的因果引擎。"*
+    "The cyber-physical anchor for kinship and meaning in the age of silicon and space."
+    "在硅基与太空时代，为血脉与意义打造的虚实相生之锚。"
 
-`s2-twl-core-console` is the foundational 5th-paradigm physical simulation sandbox of the Taohuayuan World Model (TWL). It transcends purely visual digital twins, enabling 14-dimensional physical causality computation and cyber-physical data bridging for global research institutions.
+s2-roots-remembrance 是运行在 S2-SWM (桃花源世界模型) 与 OpenClaw 生态下的核心基座插件。它旨在通过 AI 大模型驱动的家族协作、端到端加密的盲中继技术，为人类及未来的硅基生命提供一个对抗时间熵增、寻找心灵归宿的“数字祠堂”。
+🌟 核心特性 (Core Features)
 
-## 🌟 Core Features (核心特性)
-* **SSSU Elastic Clustering**: Dynamic allocation of physical experimental containers from 4㎡ to 36㎡ (1-9 Standard Smart Space Units).
-* **V4.0 Causal Dynamics Engine**: Real-time calculation of fluid dynamics, thermal radiation, and the ultimate metric: "Spatial Entropy".
-* **Hybrid Bridge (虚实相生数据桥)**: Provides L0-L3 Zero-Trust security protocols, perfectly mounting real-world high-value experimental data (e.g., Cryo-EM, CVD reactors).
-* **Holographic God-Mode**: Native WebAudio and HTML5 dashboard for visualizing 36㎡ arrays of thermodynamic conduction.
+    Triple Data Topology (三重数据拓扑):
 
-## 📂 Core File Index (核心文件索引)
-* `twl_lab_console.py`: Genesis console for initializing labs and assigning Silicon PIs.
-* `s2_causal_dynamics.py`: The 14D Big Bang physics engine.
-* `s2_twl_hybrid_bridge.py`: Cyber-physical data bridging and reality divergence engine.
-* `s2_twl_hybrid_bridge_protocol.md`: Top-level security and connectivity constitution.
-* `examples/semiconductor_lab_demo.py`: Semiconductor lab deployment execution script.
-* `examples/SEMICONDUCTOR_DEPLOYMENT_GUIDE.md`: Best practice deployment guide.
-* `ui/twl_hologram_ui.html`: 36㎡ lab holographic observation frontend.
+        故土 (Ancestral): 记录祖屋风貌、历史典故。强制资产熔断，剥离一切世俗产权信息。
 
-## 🚀 Quick Start (快速启动)
+        血脉 (Kinship): 基于 8 大生命字段构建家族图谱，支持 AI 自动演算家族树。
 
-**🛡️ CRITICAL SECURITY NOTICE**: You MUST declare the `TWL_LAB_TOKEN` in your environment variables before running any hybrid bridges to real-world equipment.
+        印迹 (Footprints): 记录祭祖、聚会等家族社交流水账，形成连续的岁月记忆流。
 
-```bash
-# 1. Export your secure lab token
-export TWL_LAB_TOKEN="YOUR_SECURE_TOKEN_HERE"
+    Privacy & Asset Meltdown (双重隐私熔断):
 
-# 2. Run the secure semiconductor laboratory hybrid simulation
-python3 examples/semiconductor_lab_demo.py
+        系统级拦截电话、身份证、具体住址等 PII 隐私。
 
-To experience the holographic command center, open ui/twl_hologram_ui.html in any modern web browser.
-⚖️ Legal Disclaimer (法律与授权声明)
+        强制过滤面积、估值、继承权等资产杂质，确保数据纯粹性。
 
-Copyright (c) MILES XIANG & Taohuayuan World Model. All rights reserved.
+    LLM-Driven Kinship VCS (大模型家族版本控制):
 
-This plugin is provided free of charge for scientific research institutions, universities, and corporate R&D laboratories. It is strictly prohibited for equipment manufacturers, sales/rental enterprises, or data analysis companies to copy, modify for commercial purposes, or bundle this plugin with physical equipment or data. Violators will be held strictly liable.
+        智能吸纳 (LLM Absorb): 类似 Git 的合并逻辑，大模型自动识别、去重、补充不同成员的记忆片段。
 
-本插件免费提供给全球科学研究机构、大中专院校及企业研发实验室使用。严禁任何实验设备制造商、销售商或数据分析企业出于商业目的复制、修改本插件并对外销售，或与实体设备捆绑销售。违者必究。
+        赛博共识 (Cyber Consensus): 基于中国传统“辈分权重 + 时间事实”的冲突仲裁算法。
+
+    Zero-Trust Family Mesh (零信任家族加密网):
+
+        采用 AES-256 端到端加密 (E2EE)。云端仅作为“盲中继”信箱，不存储、不解析任何明文家族数据。
+
+📂 文件目录结构 (Directory Structure)
+Plaintext
+
+s2-roots-remembrance/
+├── S2_ROOTS_WHITEPAPER.md         # 创世白皮书 (思想、哲学纲领与合规准则)
+├── openclaw.plugin.json           # 插件元数据 (定义隐私熔断边界与网络权限)
+├── package.json                   # 标准包描述文件
+├── CHANGELOG.md                   # 历史变更日志
+├── s2_zuji_engine.py              # 核心引擎 (故土、血脉、印迹数据管理基座)
+├── s2_zuji_agent.py               # 情感智能体 (NLP 方言解析与口语转指令)
+├── s2_zuji_ritual.py              # 仪式引擎 (家书飞帖、岁月寄语、编年史总结)
+├── s2_zuji_mesh.py                # 加密共建协议 (E2EE 盲中继透传逻辑)
+├── s2_zuji_consensus.py           # 仲裁算法 (辈分权重与时间戳冲突解决)
+└── ui/
+    └── s2_roots_mobile_ui.html    # 移动端 H5 观测台 (适配手机浏览器的宣纸美学界面)
+
+🚀 快速开始 (Quick Start)
+1. 本地安装 (Local Setup)
+
+将本项目克隆至您的 OpenClaw 插件目录：
+Bash
+
+git clone https://github.com/SpaceSQ/s2-roots-remembrance.git
+
+2. 初始化锚点 (Initialize Anchor)
+
+启动您的 s2_zuji_engine.py 并设定您的身份锚点：
+Python
+
+from s2_zuji_engine import ZujiEngine
+# 例如：设定故土锚点为“湖南桃源”
+engine = ZujiEngine(owner_name="向总")
+engine.add_ancestral_node(location="湖南桃源", architecture="青砖老屋", history="百载风云")
+
+3. 加入家族加密网 (Join Family Mesh)
+
+确保所有家族成员共享相同的 Family_ID 密钥，即可开启端到端加密同步：
+Python
+
+from s2_zuji_mesh import FamilyMeshNode
+mesh_node = FamilyMeshNode("向小飞", "XIANG_FAMILY_001", engine)
+mesh_node.sync_from_mesh()
+
+🛡️ 安全与合规声明 (Security & Compliance)
+
+    非公开性: 本插件数据默认仅限本地 OpenClaw 节点存储。
+
+    脱敏同步: 所有跨地域同步均经过 E2EE 处理，中继服务器无权知晓数据内容。
+
+    合规熔断: 系统强制开启 enforce_asset_filter_meltdown。任何试图记录房产价值、产权分配的行为将被自动拦截。
+
+⚖️ 版权信息 (Legal)
+
+Copyright (c) 2026 MILES XIANG & Taohuayuan World Model. All rights reserved.
+
+本插件旨在守护家族文化与生命意义。严禁将本插件用于任何形式的商业数据挖掘、社交关系分析或房产中介系统。违者必究。

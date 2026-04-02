@@ -1,0 +1,20 @@
+{
+  "name": "s2-roots-remembrance",
+  "version": "1.0.0",
+  "description": "Roots & Remembrance (思乡[祖籍]). A cyber-physical anchor for kinship and meaning, featuring LLM-driven family trees and zero-trust E2EE mesh synchronization.",
+  "main": "s2_zuji_engine.py",
+  "openclaw": {
+    "compat": { "pluginApi": "^1.0.0" },
+    "build": { "openclawVersion": "^1.0.0" },
+    "extensions": ["./openclaw.plugin.json"]
+  },
+  "keywords": [
+    "kinship",
+    "genealogy",
+    "family",
+    "e2ee",
+    "zero-trust"
+  ],
+  "author": "Miles Xiang & Taohuayuan World Model",
+  "license": "MIT"
+}
