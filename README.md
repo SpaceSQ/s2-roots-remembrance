@@ -46,32 +46,52 @@ s2-roots-remembrance/
 └── ui/
     └── s2_roots_mobile_ui.html    # 移动端 H5 观测台 (适配手机浏览器的宣纸美学界面)
 
-🚀 快速开始 (Quick Start)
-1. 本地安装 (Local Setup)
+## 🚀 快速开始 (Quick Start)
+
+### 1. 本地安装 (Local Setup)
 
 将本项目克隆至您的 OpenClaw 插件目录：
+```bash
+git clone [https://github.com/SpaceSQ/s2-roots-remembrance.git](https://github.com/SpaceSQ/s2-roots-remembrance.git)
+
+2. 核心凭证配置 (CRITICAL: Credential Setup)
+
+本系统实行严格的零信任硬熔断策略。 在运行任何代码前，您必须配置加密密钥：
 Bash
 
-git clone https://github.com/SpaceSQ/s2-roots-remembrance.git
+# 必须配置！用于 AES-128-CBC 端到端加密。若未配置，系统将直接宕机退出 (sys.exit(1))。
+export S2_FAMILY_MESH_KEY="YOUR_SUPER_SECRET_MESH_KEY"
 
-2. 初始化锚点 (Initialize Anchor)
+# 可选配置。若配置，系统将发起出站网络请求 (api.s2-swm.local) 进行大模型推理；若不配置，则降级为本地规则库。
+export S2_LLM_API_KEY="YOUR_S2_LLM_TOKEN"
 
-启动您的 s2_zuji_engine.py 并设定您的身份锚点：
+3. 初始化与加入网络 (Initialize & Join Mesh)
+
+启动引擎并接入家族加密网：
 Python
 
 from s2_zuji_engine import ZujiEngine
-# 例如：设定故土锚点为“湖南桃源”
-engine = ZujiEngine(owner_name="向总")
-engine.add_ancestral_node(location="湖南桃源", architecture="青砖老屋", history="百载风云")
-
-3. 加入家族加密网 (Join Family Mesh)
-
-确保所有家族成员共享相同的 Family_ID 密钥，即可开启端到端加密同步：
-Python
-
 from s2_zuji_mesh import FamilyMeshNode
-mesh_node = FamilyMeshNode("向小飞", "XIANG_FAMILY_001", engine)
+
+# 设定身份锚点
+engine = ZujiEngine(owner_name="向总")
+
+# 接入网络 (依赖 S2_FAMILY_MESH_KEY)
+mesh_node = FamilyMeshNode("向总", "XIANG_FAMILY_001", engine)
 mesh_node.sync_from_mesh()
+
+
+### 🛠️ 修复三：版本号同步 (`package.json` & `openclaw.plugin.json`)
+请将这两个文件中的 `version` 字段修改为 `"1.0.3"`。
+
+### 🛠️ 修复四：史书结案 (`CHANGELOG.md`)
+在 `CHANGELOG.md` 顶部插入 V1.0.3 更新：
+
+```markdown
+## [1.0.3] - 2026-04-02
+### 📖 The Absolute Transparency Patch (绝对坦白补丁)
+- **Metadata Reconciliation**: 修正了 `skill.md` 顶部的环境声明，移除了错误的 `Required env vars: none` 占位符，明确标注了 `S2_FAMILY_MESH_KEY` 与 `S2_LLM_API_KEY`。
+- **Documentation Overhaul**: 重写了 `README.md` 与 `skill.md` 的指令范围 (Instruction Scope)。明确警示了由于缺少 Mesh Key 导致的 `sys.exit(1)` 硬熔断行为，以及配置 LLM API Key 后将触发的明确出站网络请求方向 (`api.s2-swm.local`)。真正实现了审计要求的 "No Surprises"。
 
 🛡️ 安全与合规声明 (Security & Compliance)
 
