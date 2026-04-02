@@ -81,18 +81,6 @@ mesh_node = FamilyMeshNode("向总", "XIANG_FAMILY_001", engine)
 mesh_node.sync_from_mesh()
 
 
-### 🛠️ 修复三：版本号同步 (`package.json` & `openclaw.plugin.json`)
-请将这两个文件中的 `version` 字段修改为 `"1.0.3"`。
-
-### 🛠️ 修复四：史书结案 (`CHANGELOG.md`)
-在 `CHANGELOG.md` 顶部插入 V1.0.3 更新：
-
-```markdown
-## [1.0.3] - 2026-04-02
-### 📖 The Absolute Transparency Patch (绝对坦白补丁)
-- **Metadata Reconciliation**: 修正了 `skill.md` 顶部的环境声明，移除了错误的 `Required env vars: none` 占位符，明确标注了 `S2_FAMILY_MESH_KEY` 与 `S2_LLM_API_KEY`。
-- **Documentation Overhaul**: 重写了 `README.md` 与 `skill.md` 的指令范围 (Instruction Scope)。明确警示了由于缺少 Mesh Key 导致的 `sys.exit(1)` 硬熔断行为，以及配置 LLM API Key 后将触发的明确出站网络请求方向 (`api.s2-swm.local`)。真正实现了审计要求的 "No Surprises"。
-
 🛡️ 安全与合规声明 (Security & Compliance)
 
     非公开性: 本插件数据默认仅限本地 OpenClaw 节点存储。

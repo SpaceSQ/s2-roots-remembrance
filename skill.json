@@ -1,7 +1,7 @@
 {
   "name": "s2-roots-remembrance",
   "description": "Roots & Remembrance. A cyber-physical anchor for kinship and meaning.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "requirements": {
     "env": [
       "S2_FAMILY_MESH_KEY",

@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.5] - 2026-04-02
+## [1.0.6] - 2026-04-02
 ### 📦 The Final Sealing Patch (终极封焊补丁)
 - **Dependency Pipeline**: 新增 `requirements.txt` 并声明了 `cryptography>=41.0.0` 依赖。在 `package.json` 中注入了 `"install": "pip install -r requirements.txt"` 生命周期脚本，消除了缺失依赖导致的静默运行失败风险。
 - **Registry Alignment**: 新增最高级注册表清单 `skill.json`，在顶层元数据彻底抹除 "Required env vars: none" 的错误宣告，强制向生态平台声明 `S2_FAMILY_MESH_KEY` 与 `S2_LLM_API_KEY`，实现从底层代码到外层商店的 100% 声明一致性。
